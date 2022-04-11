@@ -1,7 +1,6 @@
-package com.cahrusat.surveyapplication.database
+package com.cahrusat.surveyapplication.database.HeadOfFamily
 
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.room.*
 
 @Dao

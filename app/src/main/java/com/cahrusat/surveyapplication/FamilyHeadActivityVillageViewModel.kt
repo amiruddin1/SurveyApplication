@@ -4,13 +4,10 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import androidx.room.Update
 import com.cahrusat.surveyapplication.database.AppDatabase
-import com.cahrusat.surveyapplication.database.VillageDao
-import com.cahrusat.surveyapplication.database.VillageEntity
-import com.cahrusat.surveyapplication.database.VillageRepository
+import com.cahrusat.surveyapplication.database.VillageData.VillageEntity
+import com.cahrusat.surveyapplication.database.VillageData.VillageRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -18,7 +15,7 @@ class FamilyHeadActivityVillageViewModel(application:Application)
     :AndroidViewModel(application)
 {
         val allVillages:LiveData<List<VillageEntity>>
-        val repository:VillageRepository
+        val repository: VillageRepository
 
         init {
             val villageDao=AppDatabase.getAppDatabaseInstance(application).getVillageDao()

@@ -1,7 +1,8 @@
-package com.cahrusat.surveyapplication.database
+package com.cahrusat.surveyapplication.database.HeadOfFamily
 
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
+import com.cahrusat.surveyapplication.database.HeadOfFamily.HeadOftheFamilyDao
+import com.cahrusat.surveyapplication.database.HeadOfFamily.HeadOftheFamilyEntity
 
 class HeadOftheFamilyRepository(private val headOftheFamilyDao: HeadOftheFamilyDao) {
     val allHeads:LiveData<List<HeadOftheFamilyEntity>>

@@ -1,4 +1,4 @@
-package com.cahrusat.surveyapplication.database
+package com.cahrusat.surveyapplication.database.FamilyMembers
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

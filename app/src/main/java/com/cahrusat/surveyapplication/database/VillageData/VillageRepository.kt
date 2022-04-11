@@ -1,7 +1,8 @@
-package com.cahrusat.surveyapplication.database
+package com.cahrusat.surveyapplication.database.VillageData
 
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
+import com.cahrusat.surveyapplication.database.VillageData.VillageDao
+import com.cahrusat.surveyapplication.database.VillageData.VillageEntity
 
 class VillageRepository(private val villageDao: VillageDao) {
     val allVillages:LiveData<List<VillageEntity>>

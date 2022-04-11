@@ -4,10 +4,10 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import androidx.room.Update
 import com.cahrusat.surveyapplication.database.*
+import com.cahrusat.surveyapplication.database.HeadOfFamily.HeadOftheFamilyEntity
+import com.cahrusat.surveyapplication.database.HeadOfFamily.HeadOftheFamilyRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -15,7 +15,7 @@ class FamilyHeadActivityViewModel(application:Application)
     :AndroidViewModel(application)
 {
         val allHeads:LiveData<List<HeadOftheFamilyEntity>>
-        val repository:HeadOftheFamilyRepository
+        val repository: HeadOftheFamilyRepository
 
         init {
             val headOftheFamilyDao=AppDatabase.getAppDatabaseInstance(application).getHeadOftheFamilyDao()

@@ -1,6 +1,8 @@
-package com.cahrusat.surveyapplication.database
+package com.cahrusat.surveyapplication.database.FamilyMembers
 
 import androidx.lifecycle.LiveData
+import com.cahrusat.surveyapplication.database.FamilyMembers.FamilyMemberDao
+import com.cahrusat.surveyapplication.database.FamilyMembers.FamilyMemberEntity
 
 class FamilyMemberRepository (private val familyMemberDao: FamilyMemberDao) {
     val allMembers: LiveData<List<FamilyMemberEntity>>

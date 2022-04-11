@@ -13,8 +13,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.cahrusat.surveyapplication.database.HeadOftheFamilyEntity
-import com.cahrusat.surveyapplication.database.VillageEntity
+import com.cahrusat.surveyapplication.database.HeadOfFamily.HeadOftheFamilyEntity
+import com.cahrusat.surveyapplication.database.VillageData.VillageEntity
 import kotlinx.android.synthetic.main.activity_family_head.*
 import kotlinx.android.synthetic.main.add_village_layout.*
 import java.text.SimpleDateFormat
@@ -23,6 +23,7 @@ import java.util.*
 
 class FamilyHeadActivity : AppCompatActivity() {
     ///Hello World!!!
+    // bro
     lateinit var viewModel: FamilyHeadActivityVillageViewModel
     lateinit var viewModelFamilyHead: FamilyHeadActivityViewModel
     lateinit var adapter1:ArrayAdapter<String>
@@ -86,7 +87,7 @@ class FamilyHeadActivity : AppCompatActivity() {
         {
             val sdf=SimpleDateFormat("dd MMM,yyyy - HH:mm")
             val currentdate=sdf.format(Date())
-            val familyHead =HeadOftheFamilyEntity(edtVillageName.text.toString(),edtDistance.text.toString().toDouble(),edtHeadName.text.toString(),edtAadhar.text.toString(),edtNoOfMembers.text.toString().toInt(),edtHeadContact.text.toString(),currentdate)
+            val familyHead = HeadOftheFamilyEntity(edtVillageName.text.toString(),edtDistance.text.toString().toDouble(),edtHeadName.text.toString(),edtAadhar.text.toString(),edtNoOfMembers.text.toString().toInt(),edtHeadContact.text.toString(),currentdate)
             viewModelFamilyHead.AddFamilyHead(familyHead)
             Toast.makeText(this,"Family Head Added Successfully!!",Toast.LENGTH_LONG).show()
             var intent=Intent(this,FamilyMembersActivity::class.java)
@@ -248,7 +249,7 @@ class FamilyHeadActivity : AppCompatActivity() {
             {
                 val sdf=SimpleDateFormat("dd MMM,yyyy - HH:mm")
                 val currentdate=sdf.format(Date())
-                val addvillage=VillageEntity(name,desc,currentdate)
+                val addvillage= VillageEntity(name,desc,currentdate)
                 viewModel.AddVillage(addvillage)
                 Toast.makeText(this,"Village Added Successfully!!",Toast.LENGTH_LONG).show()
                 dialog.dismiss()
