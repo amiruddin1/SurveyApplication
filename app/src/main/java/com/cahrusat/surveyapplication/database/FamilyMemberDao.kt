@@ -16,8 +16,8 @@ interface FamilyMemberDao {
     suspend fun delete(familyMemberEntity: FamilyMemberEntity)
 
     @Transaction
-    @Query("select * from family_head_detail where id=:id")
-    suspend fun getAllFamilyMembers(id:Int):List<HeadWithMembers>
+    @Query("select * from family_members where id=:id")
+     fun getAllFamilyMembers(id:Int):LiveData<List<FamilyMemberEntity>>
 
 
 

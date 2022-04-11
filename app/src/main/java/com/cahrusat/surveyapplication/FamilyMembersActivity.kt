@@ -5,10 +5,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
 import android.view.WindowManager
+import android.widget.ArrayAdapter
 import kotlinx.android.synthetic.main.activity_family_members.*
+import kotlinx.android.synthetic.main.member_dialog.*
 
 class FamilyMembersActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        lateinit var viewModel: FamilyHeadActivityVillageViewModel
+        lateinit var viewModelFamilyHead: FamilyHeadActivityViewModel
+        lateinit var adapter1: ArrayAdapter<String>
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_family_members)
         addFamilyMember.setOnClickListener {
@@ -23,6 +28,10 @@ class FamilyMembersActivity : AppCompatActivity() {
 
             dialog.window!!.attributes = lp
             dialog.show()
+
+            btnAddMemberDialogue.setOnClickListener{
+
+            }
         }
     }
 }

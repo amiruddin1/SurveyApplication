@@ -22,5 +22,5 @@ class FamilyMemberEntity(
 )
 {
     @PrimaryKey(autoGenerate = true)@ColumnInfo(name="m_id")
-    var mid:Int=0
+    var m_id:Int=0
 }

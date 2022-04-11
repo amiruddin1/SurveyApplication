@@ -10,12 +10,14 @@ import javax.inject.Singleton
 
 @Module
 class AppModule(val application:Application) {
+
     @Singleton
     @Provides
     fun getVillageDao(appDatabase: AppDatabase):VillageDao
     {
         return appDatabase.getVillageDao()
     }
+
     @Singleton
     @Provides
     fun getRoomDbInstance():AppDatabase{

@@ -26,10 +26,10 @@ class FamilyHeadActivityViewModel(application:Application)
         {
             repository.delete(headOftheFamilyEntity)
         }
-    fun getRecordObserver():LiveData<List<HeadOftheFamilyEntity>>
-    {
-        return  allHeads;
-    }
+        fun getRecordObserver():LiveData<List<HeadOftheFamilyEntity>>
+        {
+            return  allHeads;
+        }
         fun UpdateFamilyHead(headOftheFamilyEntity: HeadOftheFamilyEntity)=viewModelScope.launch(Dispatchers.IO)
         {
             repository.update(headOftheFamilyEntity)
@@ -38,7 +38,5 @@ class FamilyHeadActivityViewModel(application:Application)
         {
         repository.insert(headOftheFamilyEntity)
         }
-
-
 
 }
