@@ -204,7 +204,7 @@ class FamilyHeadActivity : AppCompatActivity() {
     }
 
     private fun validVillage(): CharSequence? {
-        val village=edtDistance.text.toString()
+        val village = edtVillageName.text.toString()
         if(TextUtils.isEmpty(village))
         {
             return "Must not be empty"
