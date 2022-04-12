@@ -92,7 +92,6 @@ class FamilyMembersActivity : AppCompatActivity() {
             MemberWeightListener()
             MemberBMIListener()
             MemberWaistSizeListener()
-            MemberTimeStampListener()
 
 
         }
@@ -114,7 +113,6 @@ class FamilyMembersActivity : AppCompatActivity() {
         edtFamilyMemberWeightContainer.helperText = memberWeight()
         edtFamilyMemberBMIContainer.helperText = memberBMI()
         edtFamilyMemberWaistSizeContainer.helperText = memberWaist()
-        edtFamilyMemberTimeStampContainer.helperText = memberTimestamp()
 
         // continue here ..
         val validName = edtFamilyMemberNameContainer.helperText == null
@@ -129,11 +127,10 @@ class FamilyMembersActivity : AppCompatActivity() {
         val validWeight = edtFamilyMemberWeightContainer.helperText == null
         val validBMI = edtFamilyMemberBMIContainer.helperText == null
         val validWaist = edtFamilyMemberWaistSizeContainer.helperText == null
-        val validTimestamp = edtFamilyMemberTimeStampContainer.helperText == null
 
 
         if (validName && validAge && validGender && validIncome && validMarital && validEducation &&
-            validOccupation && validHeight && validWeight && validBMI && validWaist && validTimestamp
+            validOccupation && validHeight && validWeight && validBMI && validWaist
         ) {
             val sdf = SimpleDateFormat("dd MMM,yyyy - HH:mm")
             val currentdate = sdf.format(Date())
@@ -372,24 +369,7 @@ class FamilyMembersActivity : AppCompatActivity() {
         return null
     }
 
-    private fun MemberTimeStampListener() {
-        edtFamilyMemberTimeStamp.setOnFocusChangeListener { v, hasFocus ->
 
-            if (!hasFocus) {
-
-                edtFamilyMemberTimeStampContainer.helperText = memberTimestamp()
-
-            }
-        }
-    }
-
-    private fun memberTimestamp(): CharSequence? {
-        val waist = edtFamilyMemberTimeStamp.text.toString()
-        if (TextUtils.isEmpty(waist)) {
-            return "Must not be empty"
-        }
-        return null
-    }
 
 
 }

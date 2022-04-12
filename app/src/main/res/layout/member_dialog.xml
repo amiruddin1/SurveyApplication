@@ -253,26 +253,7 @@
                     android:maxLength="3" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/edtFamilyMemberTimeStampContainer"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="2"
-                app:helperText="@string/require"
-                app:helperTextTextColor="@android:color/holo_red_dark">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edtFamilyMemberTimeStamp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Family member Time Stamp"
-                    android:singleLine="true"
-
-                    android:inputType="number"
-                    android:maxLength="3" />
-            </com.google.android.material.textfield.TextInputLayout>
 
             <Button
                 android:id="@+id/btnAddMemberDialogue"
