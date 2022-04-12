@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey
 class FamilyMemberEntity(
     @ColumnInfo(name = "member_name")val memberName:String,
     @ColumnInfo(name = "member_age")val memberAge:Int,
-    @ColumnInfo(name = "member_gender")val memberGender:Char,
+    @ColumnInfo(name = "member_gender")val memberGender:String,
     @ColumnInfo(name = "member_income")val memberIncome:Double,
     @ColumnInfo(name = "member_merital_status")val memberMeritalStatus:String,
     @ColumnInfo(name = "member_education")val memberEducation:String,

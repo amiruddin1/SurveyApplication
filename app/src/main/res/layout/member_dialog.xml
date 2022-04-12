@@ -48,6 +48,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edtFamilyMemberName"
                     android:layout_width="match_parent"
+                    android:singleLine="true"
                     android:layout_height="wrap_content"
                     android:hint="Name of the family Member" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -69,12 +70,13 @@
                     android:layout_height="wrap_content"
                     android:hint="Age of the family Member"
                     android:inputType="number"
+                    android:singleLine="true"
                     android:maxLength="3" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/edtFamilyMemberGenderContainer"
-                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
@@ -82,11 +84,11 @@
                 app:helperText="@string/require"
                 app:helperTextTextColor="@android:color/holo_red_dark">
 
-                <AutoCompleteTextView
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edtGenderName"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:editable="false"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
 
                     android:hint="Gender of the family member" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -106,12 +108,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Family member income in Rupees per month"
+                    android:singleLine="true"
+
                     android:inputType="number" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/edtFamilyMemberMStatusContainer"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:id="@+id/edtFamilyMemberMaritalStatusContainer"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
@@ -119,11 +123,11 @@
                 app:helperText="@string/require"
                 app:helperTextTextColor="@android:color/holo_red_dark">
 
-                <AutoCompleteTextView
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edtMeritalStatus"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:editable="false"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
 
                     android:hint="Maritual Status of the family member" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -141,6 +145,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edtFamilyMemberEducation"
                     android:layout_width="match_parent"
+                    android:singleLine="true"
                     android:layout_height="wrap_content"
                     android:hint="Family member Education" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -159,6 +164,8 @@
                     android:id="@+id/edtFamilyMemberOccupation"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:singleLine="true"
+
                     android:hint="Family member Occuption" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -178,6 +185,8 @@
                     android:layout_height="wrap_content"
                     android:hint="Family member Height"
                     android:inputType="number"
+                    android:singleLine="true"
+
                     android:maxLength="3" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -197,6 +206,8 @@
                     android:layout_height="wrap_content"
                     android:hint="Family member Weight"
                     android:inputType="number"
+                    android:singleLine="true"
+
                     android:maxLength="3" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -216,6 +227,8 @@
                     android:layout_height="wrap_content"
                     android:hint="Family member BMI"
                     android:inputType="number"
+                    android:singleLine="true"
+
                     android:maxLength="3" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -234,6 +247,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Family member Waist Size"
+                    android:singleLine="true"
+
                     android:inputType="number"
                     android:maxLength="3" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -253,6 +268,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Family member Time Stamp"
+                    android:singleLine="true"
+
                     android:inputType="number"
                     android:maxLength="3" />
             </com.google.android.material.textfield.TextInputLayout>

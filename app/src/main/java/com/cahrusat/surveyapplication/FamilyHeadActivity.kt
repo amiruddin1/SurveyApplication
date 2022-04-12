@@ -30,6 +30,7 @@ class FamilyHeadActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_family_head)
+
         viewModel=ViewModelProvider(this).get(FamilyHeadActivityVillageViewModel::class.java)
         viewModelFamilyHead=ViewModelProvider(this).get(FamilyHeadActivityViewModel::class.java)
 
