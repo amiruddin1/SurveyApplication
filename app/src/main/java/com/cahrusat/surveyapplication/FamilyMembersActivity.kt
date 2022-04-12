@@ -115,6 +115,7 @@ class FamilyMembersActivity : AppCompatActivity() {
         edtFamilyMemberWaistSizeContainer.helperText = memberWaist()
 
         // continue here ..
+        //
         val validName = edtFamilyMemberNameContainer.helperText == null
         val validAge = edtFamilyMemberAgeContainer.helperText == null
         val validGender = edtFamilyMemberGenderContainer.helperText == null
