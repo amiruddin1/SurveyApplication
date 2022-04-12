@@ -17,7 +17,7 @@ class FamilyMemberEntity(
     @ColumnInfo(name = "member_weight")val memberWeight:Double,
     @ColumnInfo(name = "member_BMI")val memberBMI:Double,
     @ColumnInfo(name = "member_waist_size")val memberWaistSize:Double,
-    @ColumnInfo(name = "id")val id:Int,
+    @ColumnInfo(name = "id")val id:String?,
     @ColumnInfo(name = "timestamp")val timeStamp:Double,
 )
 {

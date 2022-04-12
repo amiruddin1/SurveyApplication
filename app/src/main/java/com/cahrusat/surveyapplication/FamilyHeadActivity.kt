@@ -4,6 +4,7 @@ import android.app.AlertDialog
 import android.app.Dialog
 import android.content.DialogInterface
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.Gravity
@@ -90,6 +91,12 @@ class FamilyHeadActivity : AppCompatActivity() {
             val currentdate=sdf.format(Date())
             val familyHead = HeadOftheFamilyEntity(edtVillageName.text.toString(),edtDistance.text.toString().toDouble(),edtHeadName.text.toString(),edtAadhar.text.toString(),edtNoOfMembers.text.toString().toInt(),edtHeadContact.text.toString(),currentdate)
             viewModelFamilyHead.AddFamilyHead(familyHead)
+
+            val sharedpref: SharedPreferences = getSharedPreferences("mypref", MODE_PRIVATE)
+            var edit: SharedPreferences.Editor = sharedpref.edit();
+            edit.putString("aadhar",edtAadhar.text.toString())
+            edit.apply()
+
             Toast.makeText(this,"Family Head Added Successfully!!",Toast.LENGTH_LONG).show()
             var intent=Intent(this,FamilyMembersActivity::class.java)
             startActivity(intent)

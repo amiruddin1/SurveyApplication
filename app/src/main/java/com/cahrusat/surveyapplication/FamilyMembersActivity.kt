@@ -3,6 +3,7 @@ package com.cahrusat.surveyapplication
 import android.app.Dialog
 import android.content.DialogInterface
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
@@ -61,13 +62,12 @@ class FamilyMembersActivity : AppCompatActivity() {
             dialog.show()
 
 
-            btnAddMemberDialogue.setOnClickListener {
+            dialog.btnAddMemberDialogue.setOnClickListener {
                 var builder = AlertDialog.Builder(this)
                 builder.setMessage("Are you sure want to save details?")
                 builder.setPositiveButton("Yes",
                     DialogInterface.OnClickListener { dialogInterface, i ->
                         submitMemberForm()
-
                         // viewModelFamilyHead.AddFamilyHead()
 
                     })
@@ -133,24 +133,30 @@ class FamilyMembersActivity : AppCompatActivity() {
         if (validName && validAge && validGender && validIncome && validMarital && validEducation &&
             validOccupation && validHeight && validWeight && validBMI && validWaist
         ) {
+            val sharedpref: SharedPreferences = getSharedPreferences("mypref", MODE_PRIVATE)
+            var read = sharedpref.getString("aadhar","")
+
+
+
             val sdf = SimpleDateFormat("dd MMM,yyyy - HH:mm")
-            val currentdate = sdf.format(Date())
-//            val familyMember = FamilyMemberEntity(
-//                edtFamilyMemberName.text.toString(),
-//                edtFamilyMemberAge.text.toString().toInt(),
-//                edtGenderName.text.toString(),
-//                edtFamilyMemberIncome.text.toString().toDouble(),
-//                edtMeritalStatus.text.toString(),
-//                edtFamilyMemberEducation.text.toString(),
-//                edtFamilyMemberOccupation.text.toString(),
-//                edtFamilyMemberHeight.text.toString().toInt(),
-//                edtFamilyMemberWeight.text.toString().toDouble(),
-//                edtFamilyMemberBMI.text.toString().toDouble(),
-//                edtFamilyMemberWaistSize.text.toString().toDouble(),
-//                // here put id ,
-//               currentdate
-//            )
-         //   viewModelFamilyMember.AddFamilyMember(familyMember)
+            val currentdate = sdf.format(Date()).toDouble()
+
+            val familyMember = FamilyMemberEntity(
+                edtFamilyMemberName.text.toString(),
+                edtFamilyMemberAge.text.toString().toInt(),
+                edtGenderName.text.toString(),
+                edtFamilyMemberIncome.text.toString().toDouble(),
+                edtMeritalStatus.text.toString(),
+                edtFamilyMemberEducation.text.toString(),
+                edtFamilyMemberOccupation.text.toString(),
+                edtFamilyMemberHeight.text.toString().toInt(),
+                edtFamilyMemberWeight.text.toString().toDouble(),
+                edtFamilyMemberBMI.text.toString().toDouble(),
+                edtFamilyMemberWaistSize.text.toString().toDouble(),
+                read ,
+               currentdate
+            )
+           viewModelFamilyMember.AddFamilyMember(familyMember)
             Toast.makeText(this, "Family Head Added Successfully!!", Toast.LENGTH_LONG).show()
             var intent = Intent(this, FamilyMembersActivity::class.java)
             startActivity(intent)
