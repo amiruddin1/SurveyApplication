@@ -134,7 +134,7 @@ class FamilyMembersActivity : AppCompatActivity() {
             validOccupation && validHeight && validWeight && validBMI && validWaist
         ) {
             val sharedpref: SharedPreferences = getSharedPreferences("mypref", MODE_PRIVATE)
-            var read = sharedpref.getString("aadhar","")
+            var read = sharedpref.getString("aadhar","tt")
 
 
 

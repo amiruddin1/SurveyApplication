@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HealthCare">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/abril_fatface"
+        android:gravity="center"
+        android:text="Add Family Health Care Details"
+        android:textSize="25sp"
+        android:layout_margin="10dp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:id="@+id/scrollView4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnAddHealthCareDetails"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edthealthcenternameContainer"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="2"
+                app:helperText="@string/require"
+                app:helperTextTextColor="@android:color/holo_red_dark">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edthealthcentername"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:layout_height="wrap_content"
+                    android:hint="Name of Health Center Prefer for Treatement" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edtmodetransportationContainer"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="2"
+                app:helperText="@string/require"
+                app:helperTextTextColor="@android:color/holo_red_dark">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtmodetransportation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Mode of Transportation"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:maxLength="3" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edtdistancePharmacyContainer"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="2"
+                app:helperText="@string/require"
+                app:helperTextTextColor="@android:color/holo_red_dark">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtdistancePharmacy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:hint="Distance Form Nearest Pharmacy" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edtTypeTreatementContainer"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="2"
+                app:helperText="@string/require"
+                app:helperTextTextColor="@android:color/holo_red_dark">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtTypeTreatement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Select Type of Treatement"
+                    android:singleLine="true"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edtFirstActionHealthContainer"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="2"
+                app:helperText="@string/require"
+                app:helperTextTextColor="@android:color/holo_red_dark">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtFirstActionHealth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+
+                    android:hint="if you feel seek, what will be the First Action" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edtpreventingHomeCareContainer"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="2"
+                app:helperText="@string/require"
+                app:helperTextTextColor="@android:color/holo_red_dark">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtpreventingHomeCare"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:hint="Any Preventive Practices/ Home remedies" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edtdesicionMakerContainer"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="2"
+                app:helperText="@string/require"
+                app:helperTextTextColor="@android:color/holo_red_dark">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtdesicionMaker"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:hint="Family Helth Care Decision Maker" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edtvisitedCharusatContainer"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="2"
+                app:helperText="@string/require"
+                app:helperTextTextColor="@android:color/holo_red_dark">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtvisitedCharusat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:inputType="text"
+                    android:hint="Have You Visited CHARUSAT Hospital?" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edtvisitedCharusatDetailContainer"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="2"
+                app:helperText="@string/require"
+                app:helperTextTextColor="@android:color/holo_red_dark">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtvisitedCharusatDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="If Yes Then How Frequently?  and If No so Reason"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:maxLength="3" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edtanyDeathContainer"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="2"
+                app:helperText="@string/require"
+                app:helperTextTextColor="@android:color/holo_red_dark">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtanyDeath"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Any Death within One Year"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:maxLength="3" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edtanyDeathDetailContainer"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="2"
+                app:helperText="@string/require"
+                app:helperTextTextColor="@android:color/holo_red_dark">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtanyDeathDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="If Yes Reason Of Death"
+                    android:inputType="text"
+                    android:singleLine="true"
+
+                    android:maxLength="3" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnAddHealthCareDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add Details" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

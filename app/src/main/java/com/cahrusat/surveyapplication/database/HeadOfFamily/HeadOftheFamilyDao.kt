@@ -17,6 +17,4 @@ interface HeadOftheFamilyDao {
     @Query("select * from family_head_detail")
     fun getAllHeadDetail():LiveData<List<HeadOftheFamilyEntity>>
 
-
-
 }

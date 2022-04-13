@@ -10,14 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SurveyApplication">
         <activity
-            android:label="Family Members Detail"
-            android:name=".FamilyMembersActivity"
+            android:name=".HealthCare"
             android:exported="false" />
-
         <activity
-            android:label="Family Head Detail"
+            android:name=".FamilyMembersActivity"
+            android:exported="false"
+            android:label="Family Members Detail" />
+        <activity
             android:name=".FamilyHeadActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Family Head Detail" />
         <activity
             android:name=".SplashActivity"
             android:exported="true"
@@ -31,7 +33,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/MyTheme"/>
+            android:theme="@style/MyTheme" />
 
         <meta-data
             android:name="preloaded_fonts"

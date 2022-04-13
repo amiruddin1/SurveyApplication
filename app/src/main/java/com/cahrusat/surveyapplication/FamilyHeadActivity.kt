@@ -93,12 +93,13 @@ class FamilyHeadActivity : AppCompatActivity() {
             viewModelFamilyHead.AddFamilyHead(familyHead)
 
             val sharedpref: SharedPreferences = getSharedPreferences("mypref", MODE_PRIVATE)
-            var edit: SharedPreferences.Editor = sharedpref.edit();
+            var edit = sharedpref.edit();
             edit.putString("aadhar",edtAadhar.text.toString())
-            edit.apply()
+            edit.commit()
 
             Toast.makeText(this,"Family Head Added Successfully!!",Toast.LENGTH_LONG).show()
-            var intent=Intent(this,FamilyMembersActivity::class.java)
+
+            var intent=Intent(this,HealthCare::class.java)
             startActivity(intent)
             finish()
         }
