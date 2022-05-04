@@ -10,10 +10,11 @@ import com.cahrusat.surveyapplication.database.FamilyMembers.FamilyMemberEntity
 import com.cahrusat.surveyapplication.database.HeadOfFamily.HeadOftheFamilyDao
 import com.cahrusat.surveyapplication.database.HeadOfFamily.HeadOftheFamilyEntity
 import com.cahrusat.surveyapplication.database.HealthCare.HealthCareDao
+import com.cahrusat.surveyapplication.database.HealthCare.HealthCareEntity
 import com.cahrusat.surveyapplication.database.VillageData.VillageDao
 import com.cahrusat.surveyapplication.database.VillageData.VillageEntity
 
-@Database(entities = [VillageEntity::class, HeadOftheFamilyEntity::class, FamilyMemberEntity::class, HealthCare::class], version = 2)
+@Database(entities = [VillageEntity::class, HeadOftheFamilyEntity::class, FamilyMemberEntity::class, HealthCareEntity::class], version = 2)
 abstract class AppDatabase:RoomDatabase() {
     abstract fun getVillageDao(): VillageDao
     abstract fun getHeadOftheFamilyDao(): HeadOftheFamilyDao

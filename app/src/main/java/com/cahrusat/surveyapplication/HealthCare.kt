@@ -42,6 +42,7 @@ class HealthCare : AppCompatActivity() {
                 DialogInterface.OnClickListener { dialogInterface, i ->
 
                 })
+            builder.show()
         }
 
         HealthCenterFocusListener()
@@ -54,6 +55,7 @@ class HealthCare : AppCompatActivity() {
         VisitedCharusatListener()
         VisitedCharusatDetailsListener()
         AnyDeathListener()
+
     }
 
     fun submitHealthCareDetailsForm()
@@ -158,9 +160,7 @@ class HealthCare : AppCompatActivity() {
         edtdistancePharmacy.setOnFocusChangeListener { v, hasFocus ->
 
             if (!hasFocus) {
-
-                edtDistanceContainer.helperText = Distance()
-
+                edtdistancePharmacyContainer.helperText = Distance()
             }
         }
     }
