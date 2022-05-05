@@ -9,15 +9,11 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.view.Gravity
 import android.view.WindowManager
-import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.ViewModelProvider
 import com.cahrusat.surveyapplication.database.FamilyMembers.FamilyMemberEntity
-import com.cahrusat.surveyapplication.database.HeadOfFamily.HeadOftheFamilyEntity
-import kotlinx.android.synthetic.main.activity_family_head.*
 import kotlinx.android.synthetic.main.activity_family_members.*
-import kotlinx.android.synthetic.main.family_member_detail.*
 import kotlinx.android.synthetic.main.member_dialog.*
 import kotlinx.android.synthetic.main.member_dialog.edtFamilyMemberAge
 import kotlinx.android.synthetic.main.member_dialog.edtFamilyMemberAgeContainer
@@ -47,6 +43,11 @@ class FamilyMembersActivity : AppCompatActivity() {
 
         viewModelFamilyMember =
             ViewModelProvider(this).get(FamilyMemberActivityViewModel::class.java)
+
+        var arr = viewModelFamilyMember.getRecordObserverMember()
+
+        var ad = FamilyMemberAdapter(arr,this)
+
 
         addFamilyMember.setOnClickListener {
             var dialog = Dialog(this)

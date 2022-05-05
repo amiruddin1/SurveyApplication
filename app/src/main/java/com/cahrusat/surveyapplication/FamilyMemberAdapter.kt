@@ -1,34 +1,33 @@
 package com.cahrusat.surveyapplication
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.RecyclerView
+import com.cahrusat.surveyapplication.database.FamilyMembers.FamilyMemberEntity
 import com.google.android.material.snackbar.Snackbar
+import kotlinx.android.synthetic.main.famrecyclerstruct.view.*
 
-class FamilyMemberAdapter (val context: _root_ide_package_.android.content.Context, var arr:ArrayList<_root_ide_package_.com.cahrusat.surveyapplication.database.FamilyMembers.FamilyMemberEntity>)
-    : RecyclerView.Adapter<FamilyMemberAdapter.ViewHolder>()
-
+class FamilyMemberAdapter(val items: LiveData<List<FamilyMemberEntity>>, val context:Context): RecyclerView.Adapter<FamilyMemberAdapter.ViewHolder>()
 {
 
     class ViewHolder(var view: View): RecyclerView.ViewHolder(view)
     {
-        fun bind(f:_root_ide_package_.com.cahrusat.surveyapplication.database.FamilyMembers.FamilyMemberEntity)
-        {
-
-        }
+        val fName = view.familyMemberName
     }
-    override fun onCreateViewHolder(parent: android.view.ViewGroup, viewType: kotlin.Int): com.cahrusat.surveyapplication.FamilyMemberAdapter.ViewHolder
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: kotlin.Int): ViewHolder
     {
-        TODO("Not yet implemented")
+        return ViewHolder(LayoutInflater.from(context).inflate(R.layout.famrecyclerstruct,parent, false))
     }
-    override fun onBindViewHolder(holder: com.cahrusat.surveyapplication.FamilyMemberAdapter.ViewHolder, position: kotlin.Int)
+    override fun onBindViewHolder(holder: ViewHolder, position: kotlin.Int)
     {
-        TODO("Not yet implemented")
+        holder.fName.text = items.get(position).memberName
     }
     override fun getItemCount(): kotlin.Int
     {
-        TODO("Not yet implemented")
+        return items.size
     }
 
 
